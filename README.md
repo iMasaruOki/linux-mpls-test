@@ -43,6 +43,7 @@ linux-mpls-test
 - `make ping_B` - HostBからMPLSにpingする
 - `make dump_start` - 各vethでのtcpdumpを開始する
 - `make dump_stop` - tcpdumpを止める
+- `make show` - 仮想ホストの経路情報を表示する
 - `make clean` - 仮想ホストとpcapファイルを消去する
 
 # Tested platforms
