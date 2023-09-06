@@ -10,6 +10,7 @@ linux-mpls-test
 # Requirements
 
  - `iproute2`
+ - GNU Make
 
 # Topology
 
@@ -42,6 +43,10 @@ linux-mpls-test
 - `make dump_start` - 各vethでのtcpdumpを開始する
 - `make dump_stop` - tcpdumpを止める
 - `make clean` - 仮想ホストとpcapファイルを消去する
+
+# Tested platforms
+
+- Ubuntu 22.04 LTS
 
 # Description
 
