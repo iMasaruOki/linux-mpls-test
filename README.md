@@ -61,7 +61,7 @@ sysctl net.mpls.conf.$(NETDEV).input=1
 ip -M route $(LABEL) via inet 127.0.0.1
 ```
 
-## send MPLS packet (push label)
+### send MPLS packet (push label)
 
 ```
 ip route add $(DEST) encap mpls $(LABEL) via $(NEXTHOP)
