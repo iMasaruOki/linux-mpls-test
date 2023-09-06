@@ -11,6 +11,7 @@ linux-mpls-test
 
  - `iproute2`
  - GNU Make
+ - `sudo`
 
 # Topology
 
