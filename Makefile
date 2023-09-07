@@ -80,8 +80,8 @@ setup_router:
 	${IPNETNS} exec MPLS sysctl net.ipv4.conf.all.forwarding=1
 
 setup_route:
-	${IPNETNS} exec MPLS ip -M route add ${LABEL} via inet 127.0.0.1
+	${IPNETNS} exec MPLS ip -M route add ${LABEL} dev lo
 	${IPNETNS} exec MPLS ip route add 172.21.0.2/32 encap mpls ${LABEL} via inet 172.21.0.2
-	${IPNETNS} exec HostA ip -M route add ${LABEL} via inet 127.0.0.1
+	${IPNETNS} exec HostA ip -M route add ${LABEL} dev lo
 	${IPNETNS} exec HostA ip route add 192.168.100.0/24 encap mpls ${LABEL} via 172.21.0.1
 	${IPNETNS} exec HostB ip route add 172.21.0.0/24 via 192.168.100.1
